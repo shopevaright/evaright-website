@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mega Duffle Handbag | EvaRight</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container page-header-inner">
+        <a class="back-link" href="../travel-bags-storage.html">← Back</a>
+        <div class="brand-mini">
+          <img class="brand-mini-logo" src="../logo.png" alt="EvaRight" />
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/18687626589?text=Hi%2C%20I%27d%20like%20more%20information%20about%20the%20Mega%20Duffle%20Handbag.%20Colour%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel panel-dark">
+        <div class="container">
+          <h1 class="section-title">Mega Duffle Handbag</h1>
+          <p class="product-price" style="margin-top: -6px">TT$200</p>
+
+          <div class="product-detail">
+            <div>
+              <img
+                id="mainImg"
+                class="product-detail-img"
+                src="../mega-duffle-handbag/black.png"
+                alt="Mega Duffle Handbag"
+              />
+
+              <div class="thumb-row" aria-label="Choose a colour">
+            <button class="thumb active" data-img="../mega-duffle-handbag/black.png" aria-label="Black"><img src="../mega-duffle-handbag/black.png" alt="Black" /></button>
+            <button class="thumb" data-img="../mega-duffle-handbag/grey.png" aria-label="Grey"><img src="../mega-duffle-handbag/grey.png" alt="Grey" /></button>
+            <button class="thumb" data-img="../mega-duffle-handbag/blue.png" aria-label="Blue"><img src="../mega-duffle-handbag/blue.png" alt="Blue" /></button>
+            <button class="thumb" data-img="../mega-duffle-handbag/pink.png" aria-label="Pink"><img src="../mega-duffle-handbag/pink.png" alt="Pink" /></button>
+            <button class="thumb" data-img="../mega-duffle-handbag/mint.png" aria-label="Mint"><img src="../mega-duffle-handbag/mint.png" alt="Mint" /></button>
+            <button class="thumb" data-img="../mega-duffle-handbag/purple.png" aria-label="Purple"><img src="../mega-duffle-handbag/purple.png" alt="Purple" /></button>
+          </div>
+            </div>
+
+            <div class="product-detail-body">
+              <p class="product-desc" style="max-width: 560px">
+                A stylish multi‑purpose bag with a feminine, handbag‑inspired shape—perfect for travel, gym, work or everyday errands. Made from waterproof Oxford material to help keep your items protected.
+              </p>
+              <ul class="bullets">
+                <li>Waterproof Oxford material (durable &amp; easy to wipe clean)</li>
+                <li>Separate compartment for shoes or wet clothes</li>
+                <li>Four outer corner pockets—great for drinks, tumblers &amp; quick‑access items</li>
+                <li>Roomy interior for work, travel, gym &amp; daily essentials</li>
+              </ul>
+
+              <div class="cta-row">
+                <a class="btn btn-primary" href="https://wa.me/18687626589?text=Hi%2C%20I%27d%20like%20more%20information%20about%20the%20Mega%20Duffle%20Handbag.%20Colour%3A%20" target="_blank" rel="noopener">Order on WhatsApp</a>
+                <a class="btn btn-outline" href="../travel-bags-storage.html">Back to Travel, Bags & Storage</a>
+              </div>
+              <p class="note">Tip: When you message, please tell us the colour you want: Black, Grey, Blue, Pink, Mint or Purple.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> EvaRight</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const mainImg = document.getElementById('mainImg');
+      const thumbs = document.querySelectorAll('.thumb');
+      thumbs.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const img = btn.getAttribute('data-img');
+          if (img) mainImg.src = img;
+          thumbs.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

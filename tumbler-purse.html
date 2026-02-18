@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luxury Travel Tumbler Purse | EvaRight</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container page-header-inner">
+        <a class="back-link" href="../travel-bags-storage.html">← Back</a>
+        <div class="brand-mini">
+          <img class="brand-mini-logo" src="../logo.png" alt="EvaRight" />
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel panel-dark">
+        <div class="container">
+          <h1 class="section-title">Luxury Travel Tumbler Purse</h1>
+          <p class="product-price" style="margin-top: -6px">TT$275</p>
+
+          <div class="product-detail">
+            <div>
+              <img
+                id="mainImg"
+                class="product-detail-img"
+                src="../tumbler-purse-black.jpg"
+                alt="Luxury Travel Tumbler Purse"
+              />
+
+              <div class="thumb-row" aria-label="Choose a colour">
+                <button class="thumb" data-img="black"><img src="../tumbler-purse-black.jpg" alt="Black" /></button>
+                <button class="thumb" data-img="blue"><img src="../tumbler-purse/blue.png" alt="Blue" /></button>
+                <button class="thumb" data-img="brown"><img src="../tumbler-purse/brown.png" alt="Brown" /></button>
+                <button class="thumb" data-img="white"><img src="../tumbler-purse/white.png" alt="White" /></button>
+                <button class="thumb" data-img="pink"><img src="../tumbler-purse/pink.png" alt="Pink" /></button>
+                <button class="thumb" data-img="purple"><img src="../tumbler-purse/purple.png" alt="Purple" /></button>
+              </div>
+            </div>
+
+            <div class="product-detail-body">
+              <p class="product-desc" style="max-width: 560px">
+                Stylish crossbody purse designed to hold your tumbler on one side and your essentials on the other.
+                Fits most tumblers (including Stanley-style cups). <strong>Tumbler not included.</strong>
+              </p>
+              <ul class="bullets">
+                <li>Divider design: one side for your tumbler, one side for phone/wallet/keys</li>
+                <li>Crossbody strap for hands-free travel</li>
+                <li>Great for errands, work, travel & events</li>
+              </ul>
+
+              <div class="cta-row">
+                <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
+                <a class="btn btn-outline" href="../travel-bags-storage.html">Back to Travel, Bags & Storage</a>
+              </div>
+              <p class="note">Tip: When you message, tell us the colour you want (Black, Blue, Brown, White, Pink or Purple).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> EvaRight</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const mainImg = document.getElementById('mainImg');
+      document.querySelectorAll('.thumb').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-img');
+          mainImg.src = `../tumbler-purse/${key}.png`;
+        });
+      });
+    </script>
+  </body>
+</html>
