@@ -25,11 +25,24 @@
 
           <div class="product-detail">
             <div>
-              <img class="product-detail-img" src="logo.png" alt="Retractable Fast-Charge Car Charger with FM Transmitter" />
+              <img id="main-product-image" class="product-detail-img" src="retractable-bluetooth-car-charger-1.png" alt="Retractable Fast-Charge Car Charger with FM Transmitter" />
+
+              <div class="thumb-row">
+                <div class="thumb"><img src="retractable-bluetooth-car-charger-1.png" alt="Retractable Fast-Charge Car Charger with FM Transmitter" /></div>
+                <div class="thumb"><img src="retractable-bluetooth-car-charger-2.png" alt="Retractable Fast-Charge Car Charger with FM Transmitter" /></div>
+                <div class="thumb"><img src="retractable-bluetooth-car-charger-3.png" alt="Retractable Fast-Charge Car Charger with FM Transmitter" /></div>
+                <div class="thumb"><img src="retractable-bluetooth-car-charger-4.png" alt="Retractable Fast-Charge Car Charger with FM Transmitter" /></div>
+                <div class="thumb"><img src="retractable-bluetooth-car-charger-5.png" alt="Retractable Fast-Charge Car Charger with FM Transmitter" /></div>
+                <div class="thumb"><img src="retractable-bluetooth-car-charger-6.png" alt="Retractable Fast-Charge Car Charger with FM Transmitter" /></div>
+              </div>
             </div>
 
             <div class="product-detail-body">
-              <p class="product-desc" style="max-width: 560px">Upgrade your driving experience with fast charging and wireless audio in one device.<br>This all-in-one charger powers your phone while allowing you to stream music or take hands-free calls through your car’s FM radio.<br>Ideal for older vehicles and anyone who wants smarter in-car convenience.</p>
+              <p class="product-desc" style="max-width: 560px">
+                Upgrade your driving experience with fast charging and wireless audio in one device.<br>
+                This all-in-one charger powers your phone while allowing you to stream music or take hands-free calls through your car’s FM radio.<br>
+                Ideal for older vehicles and anyone who wants smarter in-car convenience.
+              </p>
 
               <div class="cta-row">
                 <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
@@ -50,6 +63,12 @@
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      document.querySelectorAll(".thumb img").forEach(img => {
+        img.addEventListener("click", function(){
+          document.getElementById("main-product-image").src = this.src;
+        });
+      });
     </script>
   </body>
 </html>
