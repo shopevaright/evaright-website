@@ -311,3 +311,19 @@ h2{
 .thumb.active{ box-shadow: 0 0 0 2px rgba(255,255,255,.5) inset; }
 
 .thumb-row--contain img{ object-fit: contain; background: rgba(255,255,255,.06); }
+
+.coming-soon-product{
+  position:relative;
+}
+
+.coming-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#c6a15b;
+  color:#000;
+  font-size:12px;
+  font-weight:700;
+  padding:6px 10px;
+  border-radius:8px;
+}
