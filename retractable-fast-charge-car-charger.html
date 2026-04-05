@@ -25,17 +25,16 @@
 
           <div class="product-detail">
             <div>
-              <img class="product-detail-img" src="retractable-car-charger-1.png" alt="Retractable Fast-Charge Car Charger">
+              <img id="main-product-image" class="product-detail-img" src="retractable-car-charger-1.png">
 
-<img class="product-detail-img" src="retractable-car-charger-2.png" alt="Retractable Fast-Charge Car Charger">
-
-<img class="product-detail-img" src="retractable-car-charger-3.png" alt="Retractable Fast-Charge Car Charger">
-
-<img class="product-detail-img" src="retractable-car-charger-4.png" alt="Retractable Fast-Charge Car Charger">
-
-<img class="product-detail-img" src="retractable-car-charger-5.png" alt="Retractable Fast-Charge Car Charger">
-
-<img class="product-detail-img" src="retractable-car-charger-6.png" alt="Retractable Fast-Charge Car Charger">
+<div class="thumb-row">
+  <div class="thumb"><img src="retractable-car-charger-1.png"></div>
+  <div class="thumb"><img src="retractable-car-charger-2.png"></div>
+  <div class="thumb"><img src="retractable-car-charger-3.png"></div>
+  <div class="thumb"><img src="retractable-car-charger-4.png"></div>
+  <div class="thumb"><img src="retractable-car-charger-5.png"></div>
+  <div class="thumb"><img src="retractable-car-charger-6.png"></div>
+</div>
             </div>
 
             <div class="product-detail-body">
@@ -60,6 +59,11 @@
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelectorAll(".thumb img").forEach(img => {
+  img.addEventListener("click", function(){
+    document.getElementById("main-product-image").src = this.src;
+  });
+});
     </script>
   </body>
 </html>
