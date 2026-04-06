@@ -24,8 +24,18 @@
           <p class="product-price" style="margin-top: -6px">TT$250</p>
 
           <div class="product-detail">
-            <div>
-              <img class="product-detail-img" src="logo.png" alt="Lisen 360° Rotating Car Phone Holder" />
+            <div class="product-gallery">
+              <div class="main-image">
+                <img id="mainProductImage" class="product-detail-img" src="lisen-360-rotating-car-phone-holder-1.png" alt="Lisen 360° Rotating Car Phone Holder" />
+              </div>
+
+              <div class="thumbnail-row">
+                <img src="lisen-360-rotating-car-phone-holder-1.png" alt="Lisen 360° Rotating Car Phone Holder 1" class="thumb active" onclick="changeMainImage(this)">
+                <img src="lisen-360-rotating-car-phone-holder-2.png" alt="Lisen 360° Rotating Car Phone Holder 2" class="thumb" onclick="changeMainImage(this)">
+                <img src="lisen-360-rotating-car-phone-holder-3.png" alt="Lisen 360° Rotating Car Phone Holder 3" class="thumb" onclick="changeMainImage(this)">
+                <img src="lisen-360-rotating-car-phone-holder-4.png" alt="Lisen 360° Rotating Car Phone Holder 4" class="thumb" onclick="changeMainImage(this)">
+                <img src="lisen-360-rotating-car-phone-holder-5.png" alt="Lisen 360° Rotating Car Phone Holder 5" class="thumb" onclick="changeMainImage(this)">
+              </div>
             </div>
 
             <div class="product-detail-body">
@@ -50,6 +60,16 @@
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      function changeMainImage(clickedThumb) {
+        document.getElementById('mainProductImage').src = clickedThumb.src;
+
+        document.querySelectorAll('.thumbnail-row .thumb').forEach(img => {
+          img.classList.remove('active');
+        });
+
+        clickedThumb.classList.add('active');
+      }
     </script>
   </body>
 </html>
