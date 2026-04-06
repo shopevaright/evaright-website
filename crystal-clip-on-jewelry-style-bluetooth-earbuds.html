@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crystal Clip-On Jewelry-Style Bluetooth Earbuds | EvaTrue</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container page-header-inner">
+        <a class="back-link" href="tech-charging-essentials.html">← Back</a>
+        <div class="brand-mini">
+          <img class="brand-mini-logo" src="logo.png" alt="EvaTrue" />
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel panel-dark">
+        <div class="container">
+          <h1 class="section-title">Crystal Clip-On Jewelry-Style Bluetooth Earbuds</h1>
+          <p class="product-price" style="margin-top: -6px">TT$300</p>
+
+          <div class="product-detail">
+            <div class="product-gallery">
+              <div class="main-image">
+                <img id="mainProductImage" class="product-detail-img" src="butterfly-open-ear-earbuds-1.jpg" alt="Crystal Clip-On Jewelry-Style Bluetooth Earbuds" />
+              </div>
+
+              <div class="thumbnail-row">
+                <img src="butterfly-open-ear-earbuds-1.jpg" alt="Crystal Clip-On Jewelry-Style Bluetooth Earbuds 1" class="thumb active" onclick="changeMainImage(this)">
+                <img src="butterfly-open-ear-earbuds-2.jpg" alt="Crystal Clip-On Jewelry-Style Bluetooth Earbuds 2" class="thumb" onclick="changeMainImage(this)">
+                <img src="butterfly-open-ear-earbuds-3.jpg" alt="Crystal Clip-On Jewelry-Style Bluetooth Earbuds 3" class="thumb" onclick="changeMainImage(this)">
+                <img src="butterfly-open-ear-earbuds-4.jpg" alt="Crystal Clip-On Jewelry-Style Bluetooth Earbuds 4" class="thumb" onclick="changeMainImage(this)">
+                <img src="butterfly-open-ear-earbuds-5.webp" alt="Crystal Clip-On Jewelry-Style Bluetooth Earbuds 5" class="thumb" onclick="changeMainImage(this)">
+                <img src="butterfly-open-ear-earbuds-6.webp" alt="Crystal Clip-On Jewelry-Style Bluetooth Earbuds 6" class="thumb" onclick="changeMainImage(this)">
+              </div>
+            </div>
+
+            <div class="product-detail-body">
+              <p class="product-desc" style="max-width: 560px">
+                Enjoy music, calls, and everyday audio with a stylish touch.<br>
+                These crystal clip-on jewelry-style Bluetooth earbuds combine elegant design with modern wireless technology.<br>
+                The lightweight open-ear fit sits comfortably on your ears without pressure while allowing you to stay aware of your surroundings.<br>
+                Featuring Bluetooth 5.4, AI-powered call clarity, and up to 50 hours of total playtime with the charging case.<br>
+                Designed for comfort, style, and everyday convenience.
+              </p>
+
+              <p>Available colours: Rose Gold, Purple.</p>
+
+              <div class="cta-row">
+                <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
+                <a class="btn btn-outline" href="tech-charging-essentials.html">Back to Tech & Charging Essentials</a>
+              </div>
+
+              <p class="note">
+                Tip: When you message, tell us the product name so we can help you quickly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> EvaTrue</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      function changeMainImage(clickedThumb) {
+        document.getElementById('mainProductImage').src = clickedThumb.src;
+
+        document.querySelectorAll('.thumbnail-row .thumb').forEach(img => {
+          img.classList.remove('active');
+        });
+
+        clickedThumb.classList.add('active');
+      }
+    </script>
+  </body>
+  </html>
