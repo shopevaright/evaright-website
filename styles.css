@@ -390,3 +390,44 @@ h2{
 .footer a:hover {
   text-decoration: underline;
 }
+
+/* Logo sparkle animation */
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-sparkle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  background: #d4af37;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 8px #d4af37, 0 0 16px #fff;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  40% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
