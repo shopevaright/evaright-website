@@ -391,7 +391,7 @@ h2{
   text-decoration: underline;
 }
 
-/* EvaTrue logo shooting star animation */
+/* EvaTrue Disney-style shooting star */
 
 .logo-wrapper {
   position: relative;
@@ -400,32 +400,53 @@ h2{
 
 .shooting-star {
   position: absolute;
-  top: 25%;
-  left: -100px;
-  width: 140px;
+  top: 45%;
+  left: -120px;
+  width: 120px;
   height: 2px;
-  background: linear-gradient(90deg, #ffffff, #d4af37, transparent);
+  background: linear-gradient(90deg, transparent, #d4af37, #ffffff);
+  transform: rotate(-25deg);
   opacity: 0;
-  transform: rotate(-15deg);
-  animation: shootingStar 2.4s ease-out 0.8s forwards;
+  animation: starArc 2.6s ease-out forwards;
+  pointer-events: none;
 }
 
-@keyframes shootingStar {
+/* star head */
+.star-head {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #fff4c7;
+  text-shadow: 0 0 6px #fff4c7, 0 0 10px #d4af37;
+}
+
+/* curved arc movement */
+@keyframes starArc {
+
   0% {
+    left: -120px;
+    top: 45%;
     opacity: 0;
-    transform: translateX(0) rotate(-15deg);
+    transform: rotate(-25deg) scale(0.8);
   }
 
-  10% {
+  20% {
     opacity: 1;
   }
 
-  80% {
-    opacity: 1;
+  50% {
+    left: 35%;
+    top: 10%;
+    transform: rotate(-10deg) scale(1);
   }
 
   100% {
-    transform: translateX(460px) rotate(-15deg);
+    left: 90%;
+    top: 5%;
     opacity: 0;
+    transform: rotate(-5deg) scale(0.9);
   }
+
 }
